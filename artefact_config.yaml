@@ -1,0 +1,11 @@
+name: WinTAK
+tools:
+- type: SBOM
+  params:
+  - name: path
+    value: /path/to/your/sbom.sbx
+- type: VirusScan
+  params:
+  - name: scan_mode
+    value: "quick"
+  

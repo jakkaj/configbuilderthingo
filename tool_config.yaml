@@ -1,0 +1,21 @@
+- name: SBOM Defult
+  type: SBOM
+  parameters:
+  - name: path
+    is_required: true
+  action:
+    type: exec
+    path: /usr/bin/sbom_check.sh
+    args_template: |
+      --path {{ path }}
+
+- name: Virus in simple mode
+  type: VirusScan
+  parameters:
+  - name: scan_mode
+    is_required: true
+  action:
+    type: exec
+    path: /usr/bin/virus_scan.sh
+    args_template: |
+      --scan_mode {{ scan_mode }}
